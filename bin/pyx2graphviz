@@ -8,10 +8,10 @@ use warnings;
 use PYX::GraphViz;
 
 # Arguments.
-if ($#ARGV < 0) {
-	print "Usage: $0 [filename] [-]\n";
-	print "\tfilename\tprocess on filename\n";
-	print "\t-\t\tprocess on stdin\n";
+if (@ARGV < 1) {
+	print STDERR "Usage: $0 [filename] [-]\n";
+	print STDERR "\tfilename\tprocess on filename\n";
+	print STDERR "\t-\t\tprocess on stdin\n";
 	exit 1;
 }
 
