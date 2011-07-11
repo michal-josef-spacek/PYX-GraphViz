@@ -20,6 +20,7 @@ WriteMakefile(
 	'EXE_FILES' => [
 		'bin/pyx2graphviz',
 	],
+	'LICENSE' => 'bsd',
 	'NAME' => 'PYX::GraphViz',
 	'PREREQ_PM' => {
 		'Class::Utils' => 0.01,
