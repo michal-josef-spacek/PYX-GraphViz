@@ -199,11 +199,10 @@ TODO
 
 =head1 ERRORS
 
- Mine:
-   TODO
-
- From Class::Utils::set_params():
-   Unknown parameter '%s'.
+ new():
+        Bad color define for '*' tags.
+        From Class::Utils::set_params():
+                Unknown parameter '%s'.
 
 =head1 EXAMPLE
 
