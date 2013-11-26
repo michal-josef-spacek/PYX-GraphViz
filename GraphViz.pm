@@ -68,8 +68,9 @@ sub new {
 	);
 
 	# Check to '*' color.
-	err "Bad color define for '*' tags." 
-		if ! exists $self->{'colors'}->{'*'};
+	if (! exists $self->{'colors'}->{'*'}) {
+		err "Bad color define for '*' tags.";
+	}
 
 	# GraphViz object.
 	$self->{'graphviz'} = GraphViz->new(
