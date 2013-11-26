@@ -29,7 +29,7 @@ EXAMPLE
     TODO
 
 DEPENDENCIES
-    Class::Utils(3pm), Error::Pure(3pm), GraphViz(3pm), PYX::Parser(3pm).
+    Class::Utils, Error::Pure, GraphViz, PYX::Parser.
 
 SEE ALSO
 AUTHOR
