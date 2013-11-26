@@ -1,0 +1,43 @@
+NAME
+    PYX::GraphViz - TODO
+
+SYNOPSIS
+    TODO
+
+DESCRIPTION
+    TODO
+
+METHODS
+    new()   TODO
+
+    parse() TODO
+
+    parse_file()
+            TODO
+
+    parse_handler()
+            TODO
+
+ERRORS
+     Mine:
+       TODO
+
+     From Class::Utils::set_params():
+       Unknown parameter '%s'.
+
+EXAMPLE
+    TODO
+
+DEPENDENCIES
+    Class::Utils(3pm), Error::Pure(3pm), GraphViz(3pm), PYX::Parser(3pm).
+
+SEE ALSO
+AUTHOR
+    Michal Špaček skim@cpan.org.
+
+LICENSE AND COPYRIGHT
+    BSD license.
+
+VERSION
+    0.01
+

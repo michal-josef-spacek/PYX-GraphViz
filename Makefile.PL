@@ -3,33 +3,32 @@ use strict;
 use warnings;
 
 # Modules.
-use ExtUtils::MakeMaker;
+use inc::Module::Install;
 
 # Definition.
-WriteMakefile(
-	'AUTHOR' => 'Michal Špaček <skim@cpan.org>',
-	'BUILD_REQUIRES' => {
-		'File::Object' => 0,
-		'Test::More' => 0,
-		'Test::Pod' => 0,
-		'Test::Pod::Coverage' => 0,
-	},
-	'CONFIGURE_REQUIRES' => {
-		'ExtUtils::MakeMaker' => 0,
-	},
-	'EXE_FILES' => [
-		'bin/pyx2graphviz',
-	],
-	'LICENSE' => 'bsd',
-	'NAME' => 'PYX::GraphViz',
-	'PREREQ_PM' => {
-		'Class::Utils' => 0.01,
-		'Error::Pure' => 0.01,
-		'GraphViz' => 0,
-		'PYX::Parser' => 0.01,
-	},
-	'VERSION' => '0.01',
-	'test' => {
-		'TESTS' => 't/PYX::GraphViz/*.t',
-	},
-);
+abstract 'TODO';
+author 'Michal Špaček <skim@cpan.org>';
+install_script 'bin/pyx2graphviz';
+license 'bsd';
+name 'PYX-GraphViz';
+readme_from 'GraphViz.pm';
+requires 'Class::Utils' => 0.05;
+requires 'Error::Pure' => 0.15;
+requires 'GraphViz' => 0.01;
+requires 'PYX::Parser' => 0.01;
+requires 'perl' => '5.6.2';
+resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
+	'?Name=PYX-GraphViz';
+resources 'homepage' => 'https://github.com/tupinek/PYX-GraphViz';
+resources 'repository' => 'git://github.com/tupinek/PYX-GraphViz';
+test_requires 'English' => 0;
+test_requires 'File::Object' => 0.07;
+test_requires 'Test::More' => 0;
+test_requires 'Test::NoWarnings' => 0;
+test_requires 'Test::Pod' => 0;
+test_requires 'Test::Pod::Coverage' => 0;
+tests_recursive;
+version '0.01';
+
+# Run.
+WriteAll();
