@@ -129,11 +129,13 @@ sub _start_tag {
 		'height' => $object->{'node_height'},
 		'shape' => 'point'
 	);
-	$object->{'graphviz'}->add_edge(
-		$num => $stack->[-1]->[1], 
-		'arrowhead' => 'none',
-		'weight' => 2,
-	) if $#{$stack} > -1;
+	if (@{$stack}) {
+		$object->{'graphviz'}->add_edge(
+			$num => $stack->[-1]->[1], 
+			'arrowhead' => 'none',
+			'weight' => 2,
+		);
+	}
 	push @{$stack}, [$tag, $num];
 	return;
 }
