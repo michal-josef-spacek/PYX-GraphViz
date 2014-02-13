@@ -22,6 +22,7 @@ meta-spec:
 name: PYX-GraphViz
 no_index:
   directory:
+    - examples
     - inc
     - t
 requires:
