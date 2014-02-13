@@ -8,14 +8,15 @@ DESCRIPTION
     TODO
 
 METHODS
-    new()   TODO
+    "new()" TODO
 
-    parse() TODO
-
-    parse_file()
+    "parse()"
             TODO
 
-    parse_handler()
+    "parse_file()"
+            TODO
+
+    "parse_handler()"
             TODO
 
 ERRORS
@@ -33,7 +34,7 @@ EXAMPLE
      use PYX::GraphViz;
 
      # Example PYX data.
-     my $pyx = <<'END;
+     my $pyx = <<'END';
      (html
      (head
      (title
