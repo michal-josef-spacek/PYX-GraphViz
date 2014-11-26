@@ -11,7 +11,7 @@ use GraphViz;
 use PYX::Parser;
 
 # Version.
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 # Global variables.
 use vars qw($num $object $stack);
@@ -338,6 +338,6 @@ L<http://skim.cz>
 
 =head1 VERSION
 
-0.01
+0.02
 
 =cut
