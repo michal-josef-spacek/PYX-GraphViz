@@ -1,0 +1,51 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.70.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 7b2b2aaa8d65f88b03c546aac99a473111d110f8 Changes
+SHA1 e8a7c9afafac02d7b4b1682f248ee7c006fc2f33 GraphViz.pm
+SHA1 e274f86dfcc92b6d3243fe3e117da1e4cdfab6c3 LICENSE
+SHA1 c92fde06e427b1961ec7fa8faab0652fe1602c6f MANIFEST
+SHA1 e201eaaa98c52d7e910e26c5b350b610011741ee META.yml
+SHA1 31df3deef309c1829afb7ac0033d80f5cf6456c3 Makefile.PL
+SHA1 47dcb6f28e29bac8a74bf6bc58af60e37ed52da1 README
+SHA1 4a392dfacb2307a1f6c90d16f80006b0849ca8cd bin/pyx2graphviz
+SHA1 719fda40a79af51e5236537927cc6096f074e4f4 examples/ex1.pl
+SHA1 d2664c57b65686abbfbbe1e71229761625be4922 inc/Module/Install.pm
+SHA1 da41a8d9904f7b409b49a5f6c338d3eb305a2b4b inc/Module/Install/Base.pm
+SHA1 0db0afe19cd298abba248fa089e5525bd5ab3ab6 inc/Module/Install/Can.pm
+SHA1 e7152bfd5ca67d0e33f96d09c59d600bca5c1f15 inc/Module/Install/Fetch.pm
+SHA1 29ee1cb0dc262b00983e3a2f5cf00b538dff5069 inc/Module/Install/Makefile.pm
+SHA1 e963f80cfe255f16e55067d1feb6841cff3ed2fe inc/Module/Install/Metadata.pm
+SHA1 79f5b4199f622e8b05aac266b0c39f6a85bb303f inc/Module/Install/ReadmeFromPod.pm
+SHA1 8092a930643fcabc5ae90d74814a35178e9ea233 inc/Module/Install/Scripts.pm
+SHA1 65a1f09af1f4f9e47a98b6b45667c328b1b2f9c0 inc/Module/Install/Win32.pm
+SHA1 f191c49475b3f51775180cd4f7e41e3bdab7f85a inc/Module/Install/WriteAll.pm
+SHA1 dbf59ba6250b6a2785e2c0b0ace9b2ccad1e5257 t/PYX-GraphViz/00-use.t
+SHA1 3e45eae0610d11f833b8ccd3f1164c89b12f421d t/PYX-GraphViz/01-version.t
+SHA1 80de05e51233f4cd6a2bff3aa29d0d50aaf4c489 t/PYX-GraphViz/02-pod_coverage.t
+SHA1 c8c6141e640547c87fe7bfd3d2572b1299f3c3a1 t/PYX-GraphViz/03-pod.t
+SHA1 7ec818c4d134cd4a7200fdfdf7f9aec47d5d8fd0 t/PYX-GraphViz/04-new.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEcBAEBAgAGBQJUdlf3AAoJEAwa+cf4dLBaesMIAOvDS2gCjVrjLU+I13EkjIms
+9/TVbySk/95KQDFXucvKNCyp3KxtHPw4s4zWoPr6JNmLUCdtQkJMVIRhXx7FBejl
+j2yG9m3h2RAm0r5Px8aXwaV+WYezO+3HIRjoPU4RIRbtN9w0IYkc3RySzoeH61aX
+9T8hVF6rELQW/1l3PJit4vsEYbPGxhA19voThf5DoNTL8OPB79+Tu0/dnY5ASWjZ
+LKS4hjJwc9BUIikmd4wcgSqpwzhM9hrUGHnKexun1YRpsDzmEwXuxQ491NjGq42c
+7kLLcomK7jrarMoDUKwXu3B2tg58UwNNR4Kt28BnjuqcQM74WOJUrD/Lang9Epo=
+=CNVh
+-----END PGP SIGNATURE-----
