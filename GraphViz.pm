@@ -19,6 +19,8 @@ use vars qw($num $object $stack);
 # Constructor.
 sub new {
 	my ($class, @params) = @_;
+
+	# Object.
 	my $self = bless {}, $class;
 
 	# Colors.
