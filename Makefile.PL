@@ -14,7 +14,7 @@ name 'PYX-GraphViz';
 readme_from 'GraphViz.pm';
 requires 'Class::Utils' => 0.05;
 requires 'Error::Pure' => 0.15;
-requires 'GraphViz' => 0.01;
+requires 'GraphViz' => 0;
 requires 'PYX::Parser' => 0.01;
 requires 'perl' => '5.6.2';
 resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
