@@ -60,7 +60,7 @@ sub new {
 	set_params($self, @params);
 
 	# PYX::Parser object.
-	$self->{'pyx_parser'} = PYX::Parser->new(
+	$self->{'_pyx_parser'} = PYX::Parser->new(
 		'output_handler' => $self->{'output_handler'},
 
 		# Handlers.
@@ -98,21 +98,21 @@ sub new {
 # Parse pyx text or array of pyx text.
 sub parse {
 	my ($self, $pyx) = @_;
-	$self->{'pyx_parser'}->parse($pyx);
+	$self->{'_pyx_parser'}->parse($pyx);
 	return;
 }
 
 # Parse file with pyx text.
 sub parse_file {
 	my ($self, $file) = @_;
-	$self->{'pyx_parser'}->parse_file($file);
+	$self->{'_pyx_parser'}->parse_file($file);
 	return;
 }
 
 # Parse from handler.
 sub parse_handler {
 	my ($self, $input_file_handler) = @_;
-	$self->{'pyx_parser'}->parse_handler($input_file_handler);
+	$self->{'_pyx_parser'}->parse_handler($input_file_handler);
 	return;
 }
 
