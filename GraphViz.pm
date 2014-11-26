@@ -126,14 +126,14 @@ sub _start_tag {
 	} else {
 		$color = $object->{'colors'}->{'*'};
 	}
-	$object->{'_graphviz'}->add_node($num, 
-		'color' => $color, 
+	$object->{'_graphviz'}->add_node($num,
+		'color' => $color,
 		'height' => $object->{'node_height'},
 		'shape' => 'point'
 	);
 	if (@{$stack}) {
 		$object->{'_graphviz'}->add_edge(
-			$num => $stack->[-1]->[1], 
+			$num => $stack->[-1]->[1],
 			'arrowhead' => 'none',
 			'weight' => 2,
 		);
@@ -213,7 +213,7 @@ TODO
  # Pragmas.
  use strict;
  use warnings;
- 
+
  # Modules.
  use PYX::GraphViz;
 
