@@ -61,6 +61,10 @@ DEPENDENCIES
     Class::Utils, Error::Pure, GraphViz, PYX::Parser.
 
 SEE ALSO
+    App::SGML2PYX, PYX PYX::Checker, PYX::Filter, PYX::Optimalization,
+    PYX::Parser, PYX::Sort, PYX::Stack, PYX::Utils, PYX::Write::Raw,
+    PYX::Write::Tags, PYX::Write::Tags::Code, PYX::XMLNorm.
+
 AUTHOR
     Michal Špaček skim@cpan.org.
 
