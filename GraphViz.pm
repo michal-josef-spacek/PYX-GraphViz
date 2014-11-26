@@ -97,22 +97,22 @@ sub new {
 
 # Parse pyx text or array of pyx text.
 sub parse {
-	my ($self, $pyx) = @_;
-	$self->{'_pyx_parser'}->parse($pyx);
+	my ($self, $pyx, $out) = @_;
+	$self->{'_pyx_parser'}->parse($pyx, $out);
 	return;
 }
 
 # Parse file with pyx text.
 sub parse_file {
-	my ($self, $file) = @_;
-	$self->{'_pyx_parser'}->parse_file($file);
+	my ($self, $file, $out) = @_;
+	$self->{'_pyx_parser'}->parse_file($file, $out);
 	return;
 }
 
 # Parse from handler.
 sub parse_handler {
-	my ($self, $input_file_handler) = @_;
-	$self->{'_pyx_parser'}->parse_handler($input_file_handler);
+	my ($self, $input_file_handler, $out) = @_;
+	$self->{'_pyx_parser'}->parse_handler($input_file_handler, $out);
 	return;
 }
 
