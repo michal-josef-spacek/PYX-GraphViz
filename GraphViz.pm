@@ -54,7 +54,7 @@ sub new {
 	$self->{'node_height'} = 0.3;
 
 	# Output handler.
-	$self->{'output_handler'} = *STDOUT;
+	$self->{'output_handler'} = \*STDOUT;
 
 	# Process params.
 	set_params($self, @params);
