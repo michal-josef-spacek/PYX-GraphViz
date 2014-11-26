@@ -14,15 +14,16 @@ if (@ARGV < 1) {
 	print STDERR "\t-\t\tprocess on stdin\n";
 	exit 1;
 }
+my $process_file = $ARGV[0];
 
 # PYX::GraphViz object.
 my $g = PYX::GraphViz->new;
 
 # Parse from stdin.
-if ($ARGV[0] eq '-') {
+if ($process_file eq '-') {
 	$g->parse_handler(\*STDIN);
 
 # Parse file.
 } else {
-	$g->parse_file($ARGV[0]);
+	$g->parse_file($process_file);
 }
