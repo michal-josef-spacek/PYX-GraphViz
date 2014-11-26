@@ -169,7 +169,7 @@ __END__
 
 =head1 NAME
 
-PYX::GraphViz - TODO
+PYX::GraphViz - GraphViz output for PYX handling.
 
 =head1 SYNOPSIS
 

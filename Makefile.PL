@@ -6,7 +6,7 @@ use warnings;
 use inc::Module::Install;
 
 # Definition.
-abstract 'TODO';
+abstract 'GraphViz output for PYX handling.';
 author 'Michal Spacek <skim@cpan.org>';
 install_script 'bin/pyx2graphviz';
 license 'bsd';

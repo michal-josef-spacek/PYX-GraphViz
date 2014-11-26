@@ -1,5 +1,5 @@
 ---
-abstract: TODO
+abstract: 'GraphViz output for PYX handling.'
 author:
   - 'Michal Spacek <skim@cpan.org>'
 build_requires:
