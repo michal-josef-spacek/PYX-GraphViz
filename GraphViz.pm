@@ -173,31 +173,88 @@ PYX::GraphViz - GraphViz output for PYX handling.
 
 =head1 SYNOPSIS
 
-TODO
-
-=head1 DESCRIPTION
-
-TODO
+ use PYX::GraphViz;
+ my $obj = PYX::GraphViz->new(%parameters);
+ $obj->parse($pyx, $out);
+ $obj->parse_file($input_file, $out);
+ $obj->parse_handle($input_file_handler, $out);
 
 =head1 METHODS
 
 =over 8
 
-=item C<new()>
+=item C<new(%parameters)>
 
-TODO
+Constructor
 
-=item C<parse()>
+=over 8
 
-TODO
+=item * C<colors>
 
-=item C<parse_file()>
+ Colors.
+ Default value is {
+         'a' => 'blue',
+         'blockquote' => 'orange',
+         'br' => 'orange',
+         'div' => 'green',
+         'form' => 'yellow',
+         'html' => 'black',
+         'img' => 'violet',
+         'input' => 'yellow',
+         'option' => 'yellow',
+         'p' => 'orange',
+         'select' => 'yellow',
+         'table' => 'red',
+         'td' => 'red',
+         'textarea' => 'yellow',
+         'tr' => 'red',
+         '*' => 'grey',
+ }
 
-TODO
+=item * C<height>
 
-=item C<parse_handler()>
+ GraphViz object height.
+ Default value is 10.
 
-TODO
+=item * C<layout>
+
+ GraphViz layout.
+ Default value is 'neato'.
+
+=item * C<node_height>
+
+ GraphViz object node height.
+ Default value is 0.3.
+
+=item * C<output_handler>
+
+ Output handler.
+ Default value is \*STDOUT.
+
+=item * C<width>
+
+ GraphViz object width.
+ Default value is 10.
+
+=back
+
+=item C<parse($pyx[, $out])>
+
+ Parse PYX text or array of PYX text.
+ If $out not present, use 'output_handler'.
+ Returns undef.
+
+=item C<parse_file($input_file[, $out])>
+
+ Parse file with PYX data.
+ If $out not present, use 'output_handler'.
+ Returns undef.
+
+=item C<parse_handler($input_file_handler[, $out])>
+
+ Parse PYX handler.
+ If $out not present, use 'output_handler'.
+ Returns undef.
 
 =back
 
@@ -264,9 +321,15 @@ L<PYX::Write::Tags>,
 L<PYX::Write::Tags::Code>,
 L<PYX::XMLNorm>.
 
+=head1 REPOSITORY
+
+L<https://github.com/tupinek/PYX-GraphViz>
+
 =head1 AUTHOR
 
-Michal Špaček L<skim@cpan.org>.
+Michal Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 

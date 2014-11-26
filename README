@@ -2,22 +2,77 @@ NAME
     PYX::GraphViz - GraphViz output for PYX handling.
 
 SYNOPSIS
-    TODO
-
-DESCRIPTION
-    TODO
+     use PYX::GraphViz;
+     my $obj = PYX::GraphViz->new(%parameters);
+     $obj->parse($pyx, $out);
+     $obj->parse_file($input_file, $out);
+     $obj->parse_handle($input_file_handler, $out);
 
 METHODS
-    "new()" TODO
+    "new(%parameters)"
+            Constructor
 
-    "parse()"
-            TODO
+            *       "colors"
 
-    "parse_file()"
-            TODO
+                     Colors.
+                     Default value is {
+                             'a' => 'blue',
+                             'blockquote' => 'orange',
+                             'br' => 'orange',
+                             'div' => 'green',
+                             'form' => 'yellow',
+                             'html' => 'black',
+                             'img' => 'violet',
+                             'input' => 'yellow',
+                             'option' => 'yellow',
+                             'p' => 'orange',
+                             'select' => 'yellow',
+                             'table' => 'red',
+                             'td' => 'red',
+                             'textarea' => 'yellow',
+                             'tr' => 'red',
+                             '*' => 'grey',
+                     }
 
-    "parse_handler()"
-            TODO
+            *       "height"
+
+                     GraphViz object height.
+                     Default value is 10.
+
+            *       "layout"
+
+                     GraphViz layout.
+                     Default value is 'neato'.
+
+            *       "node_height"
+
+                     GraphViz object node height.
+                     Default value is 0.3.
+
+            *       "output_handler"
+
+                     Output handler.
+                     Default value is \*STDOUT.
+
+            *       "width"
+
+                     GraphViz object width.
+                     Default value is 10.
+
+    "parse($pyx[, $out])"
+             Parse PYX text or array of PYX text.
+             If $out not present, use 'output_handler'.
+             Returns undef.
+
+    "parse_file($input_file[, $out])"
+             Parse file with PYX data.
+             If $out not present, use 'output_handler'.
+             Returns undef.
+
+    "parse_handler($input_file_handler[, $out])"
+             Parse PYX handler.
+             If $out not present, use 'output_handler'.
+             Returns undef.
 
 ERRORS
      new():
@@ -29,7 +84,7 @@ EXAMPLE
      # Pragmas.
      use strict;
      use warnings;
- 
+
      # Modules.
      use PYX::GraphViz;
 
@@ -65,8 +120,13 @@ SEE ALSO
     PYX::Parser, PYX::Sort, PYX::Stack, PYX::Utils, PYX::Write::Raw,
     PYX::Write::Tags, PYX::Write::Tags::Code, PYX::XMLNorm.
 
+REPOSITORY
+    <https://github.com/tupinek/PYX-GraphViz>
+
 AUTHOR
-    Michal Špaček skim@cpan.org.
+    Michal Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
 
 LICENSE AND COPYRIGHT
      © Michal Špaček 2011-2014
