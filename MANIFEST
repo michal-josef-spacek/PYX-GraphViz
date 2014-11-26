@@ -21,3 +21,4 @@ t/PYX-GraphViz/00-use.t
 t/PYX-GraphViz/01-version.t
 t/PYX-GraphViz/02-pod_coverage.t
 t/PYX-GraphViz/03-pod.t
+t/PYX-GraphViz/04-new.t
