@@ -46,7 +46,7 @@ sub new {
 	# Layout.
 	$self->{'layout'} = 'neato';
 
-	# Height.
+	# Height and width.
 	$self->{'height'} = 10;
 	$self->{'width'} = 10;
 
