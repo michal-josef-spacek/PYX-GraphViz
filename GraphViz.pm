@@ -75,7 +75,7 @@ sub new {
 	}
 
 	# GraphViz object.
-	$self->{'graphviz'} = GraphViz->new(
+	$self->{'_graphviz'} = GraphViz->new(
 		'layout' => $self->{'layout'},
 		'overlap' => 'scale',
 		'height' => $self->{'height'},
@@ -126,13 +126,13 @@ sub _start_tag {
 	} else {
 		$color = $object->{'colors'}->{'*'};
 	}
-	$object->{'graphviz'}->add_node($num, 
+	$object->{'_graphviz'}->add_node($num, 
 		'color' => $color, 
 		'height' => $object->{'node_height'},
 		'shape' => 'point'
 	);
 	if (@{$stack}) {
-		$object->{'graphviz'}->add_edge(
+		$object->{'_graphviz'}->add_edge(
 			$num => $stack->[-1]->[1], 
 			'arrowhead' => 'none',
 			'weight' => 2,
@@ -155,7 +155,7 @@ sub _end_tag {
 sub _final {
 	my $pyx_parser_obj = shift;
 	my $out = $pyx_parser_obj->{'output_handler'};
-	$object->{'graphviz'}->as_png($out);
+	$object->{'_graphviz'}->as_png($out);
 	return;
 }
 
