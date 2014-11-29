@@ -6,7 +6,7 @@ use warnings;
 use English qw(-no_match_vars);
 use Error::Pure::Utils qw(clean);
 use PYX::GraphViz;
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 5;
 use Test::NoWarnings;
 
 # Test.
@@ -24,6 +24,18 @@ eval {
 };
 is($EVAL_ERROR, "Unknown parameter 'something'.\n",
 	"Unknown parameter 'something'.");
+clean();
+
+# Test.
+eval {
+	PYX::GraphViz->new(
+		'colors' => {
+			'a' => 'blue',
+		},
+	);
+};
+is($EVAL_ERROR, "Bad color define for '*' tags.\n",
+	"Bad color define for '*' tags.");
 clean();
 
 # Test.
