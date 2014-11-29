@@ -14,5 +14,6 @@ SKIP: {
 		skip 'Perl version lesser then 5.8.0.', 1;
 	}
 	require Test::Pod;
-	Test::Pod::pod_file_ok(File::Object->new->up(2)->file('GraphViz.pm')->s);
+	Test::Pod::pod_file_ok(File::Object->new->up(2)
+		->file('lib', 'PYX', 'GraphViz.pm')->s);
 };

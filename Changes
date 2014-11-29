@@ -1,4 +1,7 @@
 0.02
+ - XXX Move GraphViz.pm in distribution to lib/PYX/GraphViz.pm due
+   Module::Install requires command problem with GraphViz.pm, which isn't
+   GraphViz module.
 
 0.01 2014-11-26T23:45:00+01:00
  - First version.

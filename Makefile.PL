@@ -11,7 +11,7 @@ author 'Michal Spacek <skim@cpan.org>';
 install_script 'bin/pyx2graphviz';
 license 'bsd';
 name 'PYX-GraphViz';
-readme_from 'GraphViz.pm';
+readme_from 'lib/PYX/GraphViz.pm';
 requires 'Class::Utils' => 0.05;
 requires 'Error::Pure' => 0.15;
 requires 'GraphViz' => 0;
