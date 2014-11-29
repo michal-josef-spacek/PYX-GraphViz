@@ -1,4 +1,4 @@
-0.02
+0.02 2014-11-29T09:04:56+01:00
  - Add test for constructor.
  - XXX Move GraphViz.pm in distribution to lib/PYX/GraphViz.pm due
    Module::Install requires command problem with GraphViz.pm, which isn't
