@@ -1,4 +1,4 @@
-0.03
+0.03 2015-01-18T17:44:55+01:00
  - Update copyright years.
  - Rewrite to new PYX::Parser 0.02 (callbacks).
  - Rewrite to new PYX::Parser 'non_parser_options' parameter.
