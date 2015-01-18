@@ -13,9 +13,6 @@ use PYX::Parser;
 # Version.
 our $VERSION = 0.03;
 
-# Global variables.
-use vars qw($num $object $stack);
-
 # Constructor.
 sub new {
 	my ($class, @params) = @_;
@@ -59,21 +56,6 @@ sub new {
 	# Process params.
 	set_params($self, @params);
 
-	# PYX::Parser object.
-	$self->{'_pyx_parser'} = PYX::Parser->new(
-		'callbacks' => {
-			'end_element' => \&_end_element,
-			'final' => \&_final,
-			'start_element' => \&_start_element,
-		},
-		'output_handler' => $self->{'output_handler'},
-	);
-
-	# Check to '*' color.
-	if (! exists $self->{'colors'}->{'*'}) {
-		err "Bad color define for '*' elements.";
-	}
-
 	# GraphViz object.
 	$self->{'_graphviz'} = GraphViz->new(
 		'layout' => $self->{'layout'},
@@ -82,14 +64,27 @@ sub new {
 		'width' => $self->{'width'},
 	);
 
-	# Object.
-	$object = $self;
+	# Check to '*' color.
+	if (! exists $self->{'colors'}->{'*'}) {
+		err "Bad color define for '*' elements.";
+	}
 
-	# Number iterator.
-	$num = 0;
-
-	# Stack.
-	$stack = [];
+	# PYX::Parser object.
+	$self->{'_pyx_parser'} = PYX::Parser->new(
+		'callbacks' => {
+			'end_element' => \&_end_element,
+			'final' => \&_final,
+			'start_element' => \&_start_element,
+		},
+		'non_parser_options' => {
+			'colors' => $self->{'colors'},
+			'graphviz' => $self->{'_graphviz'},
+			'node_height' => $self->{'node_height'},
+			'num' => 0,
+			'stack' => [],
+		},
+		'output_handler' => $self->{'output_handler'},
+	);
 
 	# Object.
 	return $self;
@@ -119,34 +114,41 @@ sub parse_handler {
 # Process element.
 sub _start_element {
 	my ($pyx_parser_obj, $elem) = @_;
-	$num++;
+	$pyx_parser_obj->{'non_parser_options'}->{'num'}++;
+	my $num = $pyx_parser_obj->{'non_parser_options'}->{'num'};
+	my $colors = $pyx_parser_obj->{'non_parser_options'}->{'colors'};
 	my $color;
-	if (exists $object->{'colors'}->{$elem}) {
-		$color = $object->{'colors'}->{$elem};
+	if (exists $colors->{$elem}) {
+		$color = $colors->{$elem};
 	} else {
-		$color = $object->{'colors'}->{'*'};
+		$color = $colors->{'*'};
 	}
-	$object->{'_graphviz'}->add_node($num,
+	my $graphviz = $pyx_parser_obj->{'non_parser_options'}->{'graphviz'};
+	my $node_height = $pyx_parser_obj->{'non_parser_options'}
+		->{'node_height'};
+	$graphviz->add_node($num,
 		'color' => $color,
-		'height' => $object->{'node_height'},
+		'height' => $node_height,
 		'shape' => 'point'
 	);
-	if (@{$stack}) {
-		$object->{'_graphviz'}->add_edge(
-			$num => $stack->[-1]->[1],
+	my $stack_ar = $pyx_parser_obj->{'non_parser_options'}->{'stack'};
+	if (@{$stack_ar}) {
+		$graphviz->add_edge(
+			 $num=> $stack_ar->[-1]->[1],
 			'arrowhead' => 'none',
 			'weight' => 2,
 		);
 	}
-	push @{$stack}, [$elem, $num];
+	push @{$stack_ar}, [$elem, $num];
 	return;
 }
 
 # Process elements.
 sub _end_element {
 	my ($pyx_parser_obj, $elem) = @_;
-	if ($stack->[-1]->[0] eq $elem) {
-		pop @{$stack};
+	my $stack_ar = $pyx_parser_obj->{'non_parser_options'}->{'stack'};
+	if ($stack_ar->[-1]->[0] eq $elem) {
+		pop @{$stack_ar};
 	}
 	return;
 }
@@ -154,8 +156,9 @@ sub _end_element {
 # Final.
 sub _final {
 	my $pyx_parser_obj = shift;
+	my $graphviz = $pyx_parser_obj->{'non_parser_options'}->{'graphviz'};
 	my $out = $pyx_parser_obj->{'output_handler'};
-	$object->{'_graphviz'}->as_png($out);
+	$graphviz->as_png($out);
 	return;
 }
 
