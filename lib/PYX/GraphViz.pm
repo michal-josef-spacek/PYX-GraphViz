@@ -61,17 +61,17 @@ sub new {
 
 	# PYX::Parser object.
 	$self->{'_pyx_parser'} = PYX::Parser->new(
+		'callbacks' => {
+			'end_element' => \&_end_element,
+			'final' => \&_final,
+			'start_element' => \&_start_element,
+		},
 		'output_handler' => $self->{'output_handler'},
-
-		# Handlers.
-		'end_tag' => \&_end_tag,
-		'final' => \&_final,
-		'start_tag' => \&_start_tag,
 	);
 
 	# Check to '*' color.
 	if (! exists $self->{'colors'}->{'*'}) {
-		err "Bad color define for '*' tags.";
+		err "Bad color define for '*' elements.";
 	}
 
 	# GraphViz object.
@@ -116,13 +116,13 @@ sub parse_handler {
 	return;
 }
 
-# Process tag.
-sub _start_tag {
-	my ($pyx_parser_obj, $tag) = @_;
+# Process element.
+sub _start_element {
+	my ($pyx_parser_obj, $elem) = @_;
 	$num++;
 	my $color;
-	if (exists $object->{'colors'}->{$tag}) {
-		$color = $object->{'colors'}->{$tag};
+	if (exists $object->{'colors'}->{$elem}) {
+		$color = $object->{'colors'}->{$elem};
 	} else {
 		$color = $object->{'colors'}->{'*'};
 	}
@@ -138,14 +138,14 @@ sub _start_tag {
 			'weight' => 2,
 		);
 	}
-	push @{$stack}, [$tag, $num];
+	push @{$stack}, [$elem, $num];
 	return;
 }
 
-# Process tag.
-sub _end_tag {
-	my ($pyx_parser_obj, $tag) = @_;
-	if ($stack->[-1]->[0] eq $tag) {
+# Process elements.
+sub _end_element {
+	my ($pyx_parser_obj, $elem) = @_;
+	if ($stack->[-1]->[0] eq $elem) {
 		pop @{$stack};
 	}
 	return;
@@ -261,7 +261,7 @@ Constructor
 =head1 ERRORS
 
  new():
-        Bad color define for '*' tags.
+        Bad color define for '*' elements.
         From Class::Utils::set_params():
                 Unknown parameter '%s'.
 

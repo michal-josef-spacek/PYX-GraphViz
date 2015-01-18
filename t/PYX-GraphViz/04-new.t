@@ -34,8 +34,8 @@ eval {
 		},
 	);
 };
-is($EVAL_ERROR, "Bad color define for '*' tags.\n",
-	"Bad color define for '*' tags.");
+is($EVAL_ERROR, "Bad color define for '*' elements.\n",
+	"Bad color define for '*' elements.");
 clean();
 
 # Test.

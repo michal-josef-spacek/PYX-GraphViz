@@ -76,7 +76,7 @@ METHODS
 
 ERRORS
      new():
-            Bad color define for '*' tags.
+            Bad color define for '*' elements.
             From Class::Utils::set_params():
                     Unknown parameter '%s'.
 
