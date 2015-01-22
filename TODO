@@ -6,7 +6,9 @@ TODO
 4. Opravit distribuci - bud Module::Install nebo presunout GraphViz.pm do lib/
    Je zde problem, ze kdyz nenainstaluje GraphViz, tak zkousi GraphViz.pm a pak
    to havaruje v testech.
-5.
+5. Prepsat na GraphViz2.
+6. pyx2graphviz presunout pryc.
+7.
 
 Applied
 =======
