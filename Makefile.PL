@@ -8,7 +8,6 @@ use inc::Module::Install;
 # Definition.
 abstract 'GraphViz output for PYX handling.';
 author 'Michal Spacek <skim@cpan.org>';
-install_script 'bin/pyx2graphviz';
 license 'bsd';
 name 'PYX-GraphViz';
 readme_from 'lib/PYX/GraphViz.pm';

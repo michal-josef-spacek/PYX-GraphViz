@@ -7,8 +7,9 @@ TODO
    Je zde problem, ze kdyz nenainstaluje GraphViz, tak zkousi GraphViz.pm a pak
    to havaruje v testech.
 5. Prepsat na GraphViz2.
-6. pyx2graphviz presunout pryc.
 7.
 
 Applied
 =======
+6. pyx2graphviz presunout pryc.
+OK [20150126] skim

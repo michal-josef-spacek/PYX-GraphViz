@@ -1,4 +1,5 @@
 0.04
+ - Move pyx2graphviz to App::PYX::GraphViz distribution.
 
 0.03 2015-01-18T17:44:55+01:00
  - Update copyright years.
