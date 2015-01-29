@@ -7,7 +7,8 @@ TODO
    Je zde problem, ze kdyz nenainstaluje GraphViz, tak zkousi GraphViz.pm a pak
    to havaruje v testech.
 5. Prepsat na GraphViz2.
-7.
+7. Do dokumentace pridat obrazek.
+8.
 
 Applied
 =======
