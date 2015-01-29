@@ -57,7 +57,7 @@ sub new {
 	set_params($self, @params);
 
 	# GraphViz object.
-	$self->{'_graphviz'} = GraphViz->new(
+	$self->{'_g'} = GraphViz->new(
 		'layout' => $self->{'layout'},
 		'overlap' => 'scale',
 		'height' => $self->{'height'},
@@ -78,7 +78,7 @@ sub new {
 		},
 		'non_parser_options' => {
 			'colors' => $self->{'colors'},
-			'graphviz' => $self->{'_graphviz'},
+			'g' => $self->{'_g'},
 			'node_height' => $self->{'node_height'},
 			'num' => 0,
 			'stack' => [],
@@ -123,17 +123,17 @@ sub _start_element {
 	} else {
 		$color = $colors->{'*'};
 	}
-	my $graphviz = $pyx_parser_obj->{'non_parser_options'}->{'graphviz'};
+	my $g = $pyx_parser_obj->{'non_parser_options'}->{'g'};
 	my $node_height = $pyx_parser_obj->{'non_parser_options'}
 		->{'node_height'};
-	$graphviz->add_node($num,
+	$g->add_node($num,
 		'color' => $color,
 		'height' => $node_height,
 		'shape' => 'point'
 	);
 	my $stack_ar = $pyx_parser_obj->{'non_parser_options'}->{'stack'};
 	if (@{$stack_ar}) {
-		$graphviz->add_edge(
+		$g->add_edge(
 			 $num=> $stack_ar->[-1]->[1],
 			'arrowhead' => 'none',
 			'weight' => 2,
@@ -156,9 +156,9 @@ sub _end_element {
 # Final.
 sub _final {
 	my $pyx_parser_obj = shift;
-	my $graphviz = $pyx_parser_obj->{'non_parser_options'}->{'graphviz'};
+	my $g = $pyx_parser_obj->{'non_parser_options'}->{'g'};
 	my $out = $pyx_parser_obj->{'output_handler'};
-	$graphviz->as_png($out);
+	$g->as_png($out);
 	return;
 }
 
