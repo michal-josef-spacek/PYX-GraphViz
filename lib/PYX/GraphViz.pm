@@ -322,7 +322,8 @@ L<PYX::Utils>,
 L<PYX::Write::Raw>,
 L<PYX::Write::Tags>,
 L<PYX::Write::Tags::Code>,
-L<PYX::XMLNorm>.
+L<PYX::XMLNorm>,
+L<Task::PYX>.
 
 =head1 REPOSITORY
 

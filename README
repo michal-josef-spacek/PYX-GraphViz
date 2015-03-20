@@ -118,7 +118,7 @@ DEPENDENCIES
 SEE ALSO
     App::SGML2PYX, PYX PYX::Checker, PYX::Filter, PYX::Optimalization,
     PYX::Parser, PYX::Sort, PYX::Stack, PYX::Utils, PYX::Write::Raw,
-    PYX::Write::Tags, PYX::Write::Tags::Code, PYX::XMLNorm.
+    PYX::Write::Tags, PYX::Write::Tags::Code, PYX::XMLNorm, Task::PYX.
 
 REPOSITORY
     <https://github.com/tupinek/PYX-GraphViz>
