@@ -1,5 +1,6 @@
 0.04
  - Add Task::PYX to SEE ALSO section in doc.
+ - Improve SEE ALSO section in doc.
  - Move pyx2graphviz to App::PYX::GraphViz distribution.
  - Update Module::Install to 1.16 version.
 
