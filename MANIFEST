@@ -1,6 +1,8 @@
 Changes
 examples/ex1.pl
 inc/Module/Install.pm
+inc/Module/Install/AuthorRequires.pm
+inc/Module/Install/AuthorTests.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
 inc/Module/Install/Fetch.pm
@@ -16,8 +18,8 @@ MANIFEST			This list of files
 META.yml
 README
 SIGNATURE
-t/PYX-GraphViz/00-use.t
-t/PYX-GraphViz/01-version.t
-t/PYX-GraphViz/02-pod_coverage.t
-t/PYX-GraphViz/03-pod.t
-t/PYX-GraphViz/04-new.t
+t/PYX-GraphViz/01-use.t
+t/PYX-GraphViz/02-version.t
+t/PYX-GraphViz/03-new.t
+xt/PYX-GraphViz/01-pod_coverage.t
+xt/PYX-GraphViz/02-pod.t
