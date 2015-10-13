@@ -301,6 +301,14 @@ Constructor
  # Output
  # PNG data
 
+=begin html
+
+<a href="https://raw.githubusercontent.com/tupinek/PYX-Hist/master/images/ex1.png">
+  <img src="https://raw.githubusercontent.com/tupinek/PYX-Hist/master/images/ex1.png" alt="Output of example" width="300px" height="300px" />
+</a>
+
+=end html
+
 =head1 DEPENDENCIES
 
 L<Class::Utils>,
