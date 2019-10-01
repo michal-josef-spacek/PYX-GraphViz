@@ -333,7 +333,7 @@ L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
- © 2011-2015 Michal Josef Špaček
+ © 2011-2019 Michal Josef Špaček
  BSD 2-Clause License
 
 =head1 VERSION
