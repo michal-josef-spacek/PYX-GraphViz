@@ -1,4 +1,5 @@
 0.05
+ - Fix Makefile.PL which fails with no '.' in @INC.
  - Fix link to image in doc.
  - Update Module::Install to 1.19 version.
  - Update copyright years.
