@@ -1,16 +1,13 @@
 package PYX::GraphViz;
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Modules.
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
 use GraphViz;
 use PYX::Parser;
 
-# Version.
 our $VERSION = 0.05;
 
 # Constructor.
@@ -270,11 +267,9 @@ Constructor
 
 =head1 EXAMPLE
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use PYX::GraphViz;
 
  # Example PYX data.
