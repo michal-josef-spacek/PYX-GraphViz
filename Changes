@@ -1,7 +1,7 @@
 0.05
+ - Update Module::Install to 1.19 version.
  - Update copyright years.
  - Update my name to actual version.
- - Update Module::Install to 1.19 version.
 
 0.04 2015-10-13T15:23:16+02:00
  - Add Task::PYX to SEE ALSO section in doc.
