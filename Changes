@@ -2,6 +2,7 @@
  - Fix Makefile.PL which fails with no '.' in @INC.
  - Fix link to image in doc.
  - Improve LICENSE AND COPYRIGHT section in doc.
+ - Improve SYNOPSIS section in doc.
  - Rewrite bugtracker to github.
  - Rewrite to new author github username.
  - Update Module::Install to 1.21 version.
