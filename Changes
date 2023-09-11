@@ -3,6 +3,7 @@
  - Fix link to image in doc.
  - Improve LICENSE AND COPYRIGHT section in doc.
  - Rewrite bugtracker to github.
+ - Rewrite to new author github username.
  - Update Module::Install to 1.21 version.
  - Update copyright years.
  - Update my name to actual version.

@@ -298,8 +298,8 @@ Constructor
 
 =begin html
 
-<a href="https://raw.githubusercontent.com/tupinek/PYX-GraphViz/master/images/ex1.png">
-  <img src="https://raw.githubusercontent.com/tupinek/PYX-GraphViz/master/images/ex1.png" alt="Output of example" width="300px" height="300px" />
+<a href="https://raw.githubusercontent.com/michal-josef-spacek/PYX-GraphViz/master/images/ex1.png">
+  <img src="https://raw.githubusercontent.com/michal-josef-spacek/PYX-GraphViz/master/images/ex1.png" alt="Output of example" width="300px" height="300px" />
 </a>
 
 =end html
@@ -323,7 +323,7 @@ Install the PYX modules.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/PYX-GraphViz>
+L<https://github.com/michal-josef-spacek/PYX-GraphViz>
 
 =head1 AUTHOR
 

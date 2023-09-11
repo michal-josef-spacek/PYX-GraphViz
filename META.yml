@@ -30,8 +30,8 @@ requires:
   PYX::Parser: 0.02
   perl: 5.6.0
 resources:
-  bugtracker: https://github.com/tupinek/PYX-GraphViz/issues
-  homepage: https://github.com/tupinek/PYX-GraphViz
+  bugtracker: https://github.com/michal-josef-spacek/PYX-GraphViz/issues
+  homepage: https://github.com/michal-josef-spacek/PYX-GraphViz
   license: http://opensource.org/licenses/bsd-license.php
-  repository: git://github.com/tupinek/PYX-GraphViz
+  repository: git://github.com/michal-josef-spacek/PYX-GraphViz
 version: '0.05'
