@@ -3,9 +3,6 @@ TODO
 1. Dodelat testy.
 2. Dodelat prepinac ruznych vystupu.
 3. Do prikladu udelat argument pro vystupni soubor.
-4. Opravit distribuci - bud Module::Install nebo presunout GraphViz.pm do lib/
-   Je zde problem, ze kdyz nenainstaluje GraphViz, tak zkousi GraphViz.pm a pak
-   to havaruje v testech.
 5. Prepsat na GraphViz2.
 8.
 
@@ -16,3 +13,8 @@ OK [20150126] skim
 
 7. Do dokumentace pridat obrazek.
 OK [20151013] skim
+
+4. Opravit distribuci - bud Module::Install nebo presunout GraphViz.pm do lib/
+   Je zde problem, ze kdyz nenainstaluje GraphViz, tak zkousi GraphViz.pm a pak
+   to havaruje v testech.
+OK [20230911] skim
