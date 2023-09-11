@@ -268,6 +268,8 @@ Constructor
 
 =head1 EXAMPLE
 
+=for comment filename=simple_html_to_png.pl
+
  use strict;
  use warnings;
 
