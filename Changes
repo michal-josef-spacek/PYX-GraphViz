@@ -1,5 +1,6 @@
 0.06
  - Fix doc.
+ - Rename image to same name as example from which is generated.
 
 0.05 2023-09-11T23:32:16+02:00
  - Fix Makefile.PL which fails with no '.' in @INC.

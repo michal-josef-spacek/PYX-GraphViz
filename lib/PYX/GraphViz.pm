@@ -301,8 +301,8 @@ Constructor
 
 =begin html
 
-<a href="https://raw.githubusercontent.com/michal-josef-spacek/PYX-GraphViz/master/images/ex1.png">
-  <img src="https://raw.githubusercontent.com/michal-josef-spacek/PYX-GraphViz/master/images/ex1.png" alt="Output of example" width="300px" height="300px" />
+<a href="https://raw.githubusercontent.com/michal-josef-spacek/PYX-GraphViz/master/images/simple_html_to_png.png">
+  <img src="https://raw.githubusercontent.com/michal-josef-spacek/PYX-GraphViz/master/images/simple_html_to_png.png" alt="Output of example" width="300px" height="300px" />
 </a>
 
 =end html
